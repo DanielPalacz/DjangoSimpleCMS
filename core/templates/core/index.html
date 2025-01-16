@@ -7,8 +7,8 @@
         <div class="row">
                 {% for core in index %}
                     <div class="col-md-4">
-                        <img class="card-img-top" src="https://placehold.co/150x100" alt="Card image cap">
 
+                        <div class="card mb-4 box-shadow" style="background-color: #FAF0E6;">
                         <div class="card-body">
                             <h4 class=""><a href="{{ core.get_absolute_url }}">{{ core.title }}</a></h4>
                             <p class="card-text"></p>
@@ -22,6 +22,7 @@
                             </div>
 
 
+                        </div>
                         </div>
 
                     </div>

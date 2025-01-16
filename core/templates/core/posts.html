@@ -18,10 +18,10 @@
         <div class="row">
         {% for post in post_list %}
             <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="https://via.placeholder.com/150x100" alt="Card image cap">
+              <div class="card mb-4 box-shadow" style="background-color: #FAF0E6;">
+
                 <div class="card-body">
-                    <h4 class="lead"><a class="text-dark" href="{% url 'core:single' post.pk %}">{{ post.title }}</a></h4>
+                    <h4 class="lead"><a class="text-dark" href="{% url 'core:single' post.slug %}">{{ post.title }}</a></h4>
                      <p class="card-text"></p>
                     <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
