@@ -7,7 +7,9 @@ urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
     path('add/', views.AddView.as_view(), name='add'),
     path('posts/', views.PostsView.as_view(), name='posts'),
-    path('<slug:slug>/', views.SingleView.as_view(), name='single'),
     path('edit/<int:pk>/', views.EditView.as_view(), name='edit'),
     path('delete/<int:pk>/', views.DeleteCustomView.as_view(), name='delete'),
+    path('login/', views.login_view, name='login'),
+    path('logout/', views.logout_view, name='logout'),
+    path('<slug:slug>/', views.SingleView.as_view(), name='single'),
 ]

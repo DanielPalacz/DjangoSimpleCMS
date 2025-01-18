@@ -1,0 +1,33 @@
+{% extends "core/base.html" %}
+
+{% block title %}
+Login page.
+{% endblock %}
+
+
+{% block content %}
+<div class="login pt-1 ml-1">
+
+{% if form.errors %}
+    <p>Your username and password does not match.</p>
+{% else %}
+
+
+    <div class="m-2">
+    <u>Please log in:</u>
+
+
+    <div class="login-form m-1">
+        <form action="{% url 'core:login' %}" method="post">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <p><input type="submit" value="Log-in"></p>
+
+        </form>
+    </div>
+    </div>
+
+{% endif %}
+
+</div>
+{% endblock %}

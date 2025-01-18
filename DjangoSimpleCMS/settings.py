@@ -127,3 +127,8 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# LOGIN_URL = '/login/'
+# CSRF_COOKIE_SECURE = False  # Tylko dla środowisk deweloperskich, w produkcji ma być True przy HTTPS
+# CSRF_COOKIE_HTTPONLY = True  # Ustawi ciasteczka CSRF tylko do odczytu
+# CSRF_FAILURE_VIEW = 'django.views.csrf.csrf_failure'  # Obsługa błędów CSRF
