@@ -1,25 +1,22 @@
 {% if not request.path == '/posts/' %}
-<div class="container">
-    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+
+    <footer class="p-4 border-top" style="background-color: #4B0082 !important; color: white;">
         <div class="row">
             <div class="col-6 col-md">
                 <h5>Links:</h5>
                 <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="https://github.com/DanielPalacz/DjangoSimpleCMS">Source code</a></li>
-                </ul>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="/">Personal website</a></li>
+                    <li><a style="color: white !important;" class="text-muted" href="https://github.com/DanielPalacz/DjangoSimpleCMS">Source code</a></li>
+                    <li><a style="color: white !important;" class="text-muted" href="/">Personal website</a></li>
                 </ul>
             </div>
             {% if request.user.is_authenticated %}
             <div class="col-6 col-md">
                 <h5>Admin:</h5>
                 <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="{% url 'core:posts' %}">Post Admin</a></li>
+                    <li><a style="color: white !important;" class="text-muted" href="{% url 'core:posts' %}">Post Admin</a></li>
                 </ul>
             </div>
             {% endif %}
         </div>
     </footer>
-</div>
 {% endif %}
