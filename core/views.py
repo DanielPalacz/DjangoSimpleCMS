@@ -5,6 +5,7 @@ from django.views.generic import ListView, DetailView, UpdateView, DeleteView, C
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login
 from django.contrib.auth import logout
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 
 from .models import Core
@@ -23,7 +24,7 @@ class SingleView(DetailView):
     context_object_name = "post"
 
 
-class PostsView(ListView):
+class PostsView(LoginRequiredMixin, ListView):
     model = Core
     template_name = "core/posts.html"
     context_object_name = "post_list"
